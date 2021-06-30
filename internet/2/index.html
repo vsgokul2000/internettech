@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <title>PHP Test</title>
+  </head>
+  <body>
+    
+  <form action="index.php" method="get">
+  <H1>STRING COMPARISON</H1>
+STRING 1:<input type="text" name="name"><br><BR>
+STRING 2: <input type="text" name="email"><br>
+<input type="submit">
+<?php  if ( isset( $_GET['submit'] ) )
+        {
+    $name1 = $_GET['name'];
+    $name2 = $_GET['email']; 
+    echo '$name1';
+if ( strcmp($name1, $name2) !== 0) {
+    echo 'Both strings are not equallll';
+}
+else 
+    echo 'Both strings are equal';
+        }
+ ?>
+</form>
+  </body>
+</html>
